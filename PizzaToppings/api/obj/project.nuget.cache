@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8PhJMXaO1CU=",
+  "dgSpecHash": "Ba+V+jOawZ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jamag\\Documents\\JunkProjects\\PizzaToppings\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\jamag\\Documents\\GitHub\\PizzaTopping-AspNetCore8\\PizzaToppings\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jamag\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\jamag\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
