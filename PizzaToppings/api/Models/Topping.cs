@@ -16,7 +16,8 @@ namespace api.Models
         [MaxLength(100)]
         public string name { get; set; } = string.Empty;
 
-       public List<PizzaTopping> PizzaToppings { get; set; } = new();
+        public List<PizzaTopping> PizzaToppings { get; set; } = new();
+
 
     }
 }
