@@ -20,5 +20,6 @@ namespace api.Models
         public decimal price { get; set; }
 
         public List<Topping> Toppings { get; set; } = new List<Topping>();
+        public List<PizzaTopping> PizzaToppings { get; set; } = new();
     }
 }

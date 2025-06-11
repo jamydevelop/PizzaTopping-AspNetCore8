@@ -19,5 +19,26 @@ namespace api.Data
         public DbSet<Topping> Toppings { get; set; }
         public DbSet<PizzaTopping> PizzasToppings { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    base.OnModelCreating(modelBuilder);
+
+    // COMPOSITE PRIMARY KEY
+    modelBuilder.Entity<PizzaTopping>()
+        .HasKey(pt => new { pt.PizzaId, pt.ToppingId });
+
+    // CONNECTING TO PIZZA
+    modelBuilder.Entity<PizzaTopping>()
+        .HasOne(pt => pt.Pizza)
+        .WithMany(p => p.PizzaToppings)
+        .HasForeignKey(pt => pt.PizzaId);
+
+    // CONNECTING TO TOPPING
+    modelBuilder.Entity<PizzaTopping>()
+        .HasOne(pt => pt.Topping)
+        .WithMany(t => t.PizzaToppings)
+        .HasForeignKey(pt => pt.ToppingId);
+}
+
     }
 }
