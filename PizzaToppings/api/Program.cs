@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Swagger/OpenAPI services
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -27,5 +28,5 @@ app.UseHttpsRedirection();
 
 // You can add your API endpoints here, for example:
 // app.MapGet("/", () => "Hello World!");
-
+app.MapControllers();
 app.Run();

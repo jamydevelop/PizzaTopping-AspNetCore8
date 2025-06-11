@@ -16,5 +16,12 @@ namespace api.Controllers
         {
             _context = context;
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var pizza = _context.Pizzas.ToList();
+            return Ok(pizza);
+        }
     }
 }
