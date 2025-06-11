@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using api.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +18,13 @@ namespace api.Controllers
         {
             var pizza = _context.Pizzas.ToList();
             return Ok(pizza);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById([FromRoute] int id)
+        {
+            var pizzaById = _context.Pizzas.Find(id);
+            return Ok(pizzaById);
         }
     }
 }
